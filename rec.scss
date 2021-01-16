@@ -1,0 +1,274 @@
+//Reseter
+html 
+{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}  
+
+
+//Body
+body
+{
+    color: #f4f4f4;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: #11365f;
+    font-family: 'Roboto', sans-serif;
+}
+
+//***********************
+//******GRID AREA********
+//***********************
+//This is the Desktop version Grid
+.grid 
+{
+    height:100%;
+    display: grid;
+    -ms-grid-columns: (1fr)(12);
+        grid-template-columns: repeat(12, 1fr);
+    -ms-grid-rows: 40px auto 40px;
+        grid-template-rows: 40px auto 40px;
+    grid-gap: 5%;
+        grid-template-areas:
+        ". intro intro intro intro . . . . . . ."
+        ". . . . . . . . . . . ."
+        ". in in in in . out out out out out ."
+        ". in in in in . out out out out out ."
+        ". . . . . . . . . . . .";
+}
+
+
+//This holds the grid for the logo <DIV>
+.intro
+{
+    grid-area: intro;
+}
+
+//This holds the grid for the input <DIV>
+.in
+{
+    grid-area: in;
+}
+
+//This holds the grid for the buttons
+.btns
+{
+    grid-area:btns;
+}
+
+//*************
+//**LOGO AREA**
+//*************
+//Big App logo
+h1
+{
+    font-size: 4em;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+//This holds the grid for the output <DIV>
+.out
+{
+    overflow-x: scroll; 
+    overflow-y: scroll; 
+    color:#00ff00;
+    background-color: black;
+    border-radius: 5%; 
+    grid-area: out;
+    padding: 1%;
+    text-align: left;
+    padding-left: 5%;
+}
+
+//This will make sure that the Js output will keep the style for output
+.outJs
+{
+    font-size:inherit;
+}
+
+
+//Bigger fonts to avoid typos
+p
+{
+    font-weight: bold;
+    font-size:larger;
+}
+//Italic for input labels
+.in
+{
+    p
+    {
+        font-style: italic;
+    }
+}
+
+//Simple input style
+input
+{
+    background-color: black;
+    color: #00ff00;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 90%;
+    font-family: monospace;
+    font-size: x-large;
+    text-transform: uppercase;
+}
+
+//Added a marging between the two Steplib inputs
+#stLb2
+{
+    margin-top: 2%;
+}
+
+//Button style duh
+.btnDiv
+{
+    display: flex;
+    flex-direction: row;
+}
+button
+{
+    color: #f4f4f4;
+    border-color: #f4f4f4;
+    background-color: #11365f;
+    border-radius: 15px;
+    padding:2%;
+    padding-left: 2em;
+    padding-right: 2em;
+    font-size: large;
+    margin-top: 6%;  
+    cursor: pointer;  
+}
+
+//Second button marging
+#btn
+{
+    margin-left: 10%;
+    margin-right: 15%;
+}
+
+//COLS style
+.cols
+{
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-size: inherit;
+}
+
+//********************
+//**OUTPUT SPAN AREA**
+//********************
+.whites
+{
+    color:white;
+}
+
+.reds
+{
+    color:red;
+}
+
+.yellows
+{
+    color:yellow;
+}
+
+//******************
+//**ANIMATION AREA**
+//******************
+//blink animation to simulate ISPF - You can also try alt + 219 for the box one
+.blink
+{
+    color:white;
+    animation: animate 0.5s linear infinite;
+}
+
+@keyframes animate{ 
+    0%{ 
+      opacity: 0; 
+    } 
+    50%{ 
+      opacity: 1; 
+    } 
+    100%{ 
+      opacity: 0; 
+    } 
+  } 
+
+  //*******************
+  //***Responsivines***
+  //*******************
+
+// QUICK MEDIUM
+@media only screen and (min-width: 800px) and (max-width: 1500px)
+{   
+    .grid
+    {
+        grid-template-areas:
+        ". intro intro intro intro . . . . . . ."
+        ". intro intro intro intro . . . . . . ."
+        ". in in in in . out out out out out ."
+        ". in in in in . out out out out out ."
+        ". . . . . . . . . . . .";
+    }
+    .btnDiv
+    {
+        display: flex;
+        flex-direction: row;
+    }
+    #btn
+    {
+    margin-left: 0;
+    margin-right: 1%;
+    flex: 50%;
+    }
+    #clear
+    {
+        margin-left: 1%;
+        flex: 50%;
+    }
+}
+
+// QUICK SMALL
+    @media only screen and (min-width: 1em) and (max-width: 954px)
+    {   
+        .grid
+        {
+            grid-template-areas:
+            ". intro intro intro intro intro intro intro intro intro intro ."
+            ". intro intro intro intro intro intro intro intro intro intro ."
+            ". . . . . . . . . . . ."
+            ". in in in in in in in in in in ."
+            ". out out out out out out out out out out ."
+            ". out out out out out out out out out out ."
+            ". out out out out out out out out out out ."
+            ". out out out out out out out out out out ."
+            ". out out out out out out out out out out ."
+            ". out out out out out out out out out out ."
+            ". out out out out out out out out out out ."
+            ". out out out out out out out out out out ."
+            ". out out out out out out out out out out ."
+            ". out out out out out out out out out out ."
+            ". out out out out out out out out out out ."
+            ". . . . . . . . . . . .";
+        }
+        .btnDiv
+        {
+            display: flex;
+            flex-direction: row;
+        }
+        #btn
+        {
+        margin-left: 0;
+        margin-right: 1%;
+        flex: 50%;
+        }
+        #clear
+        {
+            margin-left: 1%;
+            flex: 50%;
+        }
+    }

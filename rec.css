@@ -1,0 +1,227 @@
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+body {
+  color: #f4f4f4;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-color: #11365f;
+  font-family: 'Roboto', sans-serif;
+}
+
+.grid {
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 12;
+  grid-template-columns: repeat(12, 1fr);
+  -ms-grid-rows: 40px auto 40px;
+  grid-template-rows: 40px auto 40px;
+  grid-gap: 5%;
+      grid-template-areas: ". intro intro intro intro . . . . . . ." ". . . . . . . . . . . ." ". in in in in . out out out out out ." ". in in in in . out out out out out ." ". . . . . . . . . . . .";
+}
+
+.intro {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 4;
+  grid-area: intro;
+}
+
+.in {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 4;
+  grid-area: in;
+}
+
+.btns {
+  grid-area: btns;
+}
+
+h1 {
+  font-size: 4em;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.out {
+  overflow-x: scroll;
+  overflow-y: scroll;
+  color: #00ff00;
+  background-color: black;
+  border-radius: 5%;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 5;
+  grid-area: out;
+  padding: 1%;
+  text-align: left;
+  padding-left: 5%;
+}
+
+.outJs {
+  font-size: inherit;
+}
+
+p {
+  font-weight: bold;
+  font-size: larger;
+}
+
+.in p {
+  font-style: italic;
+}
+
+input {
+  background-color: black;
+  color: #00ff00;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  width: 90%;
+  font-family: monospace;
+  font-size: x-large;
+  text-transform: uppercase;
+}
+
+#stLb2 {
+  margin-top: 2%;
+}
+
+.btnDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+button {
+  color: #f4f4f4;
+  border-color: #f4f4f4;
+  background-color: #11365f;
+  border-radius: 15px;
+  padding: 2%;
+  padding-left: 2em;
+  padding-right: 2em;
+  font-size: large;
+  margin-top: 6%;
+  cursor: pointer;
+}
+
+#btn {
+  margin-left: 10%;
+  margin-right: 15%;
+}
+
+.cols {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: inherit;
+}
+
+.whites {
+  color: white;
+}
+
+.reds {
+  color: red;
+}
+
+.yellows {
+  color: yellow;
+}
+
+.blink {
+  color: white;
+  -webkit-animation: animate 0.5s linear infinite;
+          animation: animate 0.5s linear infinite;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1500px) {
+  .grid {
+        grid-template-areas: ". intro intro intro intro . . . . . . ." ". intro intro intro intro . . . . . . ." ". in in in in . out out out out out ." ". in in in in . out out out out out ." ". . . . . . . . . . . .";
+  }
+  .btnDiv {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  #btn {
+    margin-left: 0;
+    margin-right: 1%;
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+  }
+  #clear {
+    margin-left: 1%;
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+  }
+}
+
+@media only screen and (min-width: 1em) and (max-width: 954px) {
+  .grid {
+        grid-template-areas: ". intro intro intro intro intro intro intro intro intro intro ." ". intro intro intro intro intro intro intro intro intro intro ." ". . . . . . . . . . . ." ". in in in in in in in in in in ." ". out out out out out out out out out out ." ". out out out out out out out out out out ." ". out out out out out out out out out out ." ". out out out out out out out out out out ." ". out out out out out out out out out out ." ". out out out out out out out out out out ." ". out out out out out out out out out out ." ". out out out out out out out out out out ." ". out out out out out out out out out out ." ". out out out out out out out out out out ." ". out out out out out out out out out out ." ". . . . . . . . . . . .";
+  }
+  .btnDiv {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  #btn {
+    margin-left: 0;
+    margin-right: 1%;
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+  }
+  #clear {
+    margin-left: 1%;
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+  }
+}
+/*# sourceMappingURL=rec.css.map */

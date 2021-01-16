@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBA Tools</title>
+    <link href="css/rec.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+</head>
+<body>
+
+<!-- START OF MAIN GRID -->
+    <div class="grid">
+        <div class="intro">
+            <h1>HP Image Copy</h1>
+        </div>
+<!-- Input area -->
+        <div class='in'>           
+            <p>Your Database name:</p>
+            <input id='dbName' title="Type your Database name here">
+
+        
+            <p>STEPLIB:</p>
+            <input id='stLb1' title="This statement points to two load module library data sets that must be in sequence">
+            <br>
+            <input id='stLb2' title="This statement points to two load module library data sets that must be in sequence">
+        
+
+            <p>DFSRESLB:</p>
+            <input id='dfsLb' title="This statement points to an authorized library that contains the IMS SVC modules">
+
+            <p>IMS:</p>
+            <input id='ims' title="This statement defines the library that contains the DBD describing the database dump">
+
+            <p>Data base data set   :</p>
+            <input id='db' title="Your database data set">
+
+            <p>DBD:</p>
+            <input id='dbd' title="You Database DBD">
+
+            <p>DDN:</p>
+            <input id='ddn' title="Your Database DDN">
+<!-- A flexbox for the buttons responsivines -->
+            <br>
+            <div class="btnDiv">
+            <button id="btn">GENERATE</button>
+            <button id="clear">CLEAR</button>
+            </div>
+        </div>    
+    <!-- Output is here -->
+        <div class='out'>
+            <p id='out'>YOUR JCL WILL SHOW UP HERE<span class="blink">_</span></p>
+        </div>
+
+    </div>
+<!-- END OF MAIN GRID -->
+    <script src="js/main.js"></script>
+</body>
+</html>
